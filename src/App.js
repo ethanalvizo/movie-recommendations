@@ -32,8 +32,8 @@ function App() {
 		const movieFavorites = JSON.parse(
 			localStorage.getItem('react-movie-app-favourites')
 		);
-    
-		setFavorites(movieFavorites);
+
+		setFavorites(movieFavorites || []);
 	}, []);
 
   const saveToLocalStorage = (items) => {
